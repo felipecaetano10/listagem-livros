@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Lista de Livros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+    </ion-list-header>
+    <ion-item *ngFor="let livro of listaLivros">
+      <ion-avatar slot="start">
+        <img src="{{livro.logo}}"/>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="font-weight: bold;">{{livro.nome}}</h2>
+        <h3>{{livro.autor}}</h3>
+        <h4>{{livro.isbn}}</h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
